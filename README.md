@@ -32,10 +32,10 @@ if(isLearning){
 }
 
 	1. What should the above code console.log? Why?
-		The code should print "Keep it up!"
+	The code should print "Keep it up!"
 	2. Why do we not need to specify if(isLearning === true)? Why does if(isLearning) work on its own?
-		We do not need to specify it because condition in if-else statements will be forced into a boolean. It works on its own 		because isLearning value is true;
-		
+	We do not need to specify it because condition in if-else statements will be forced into a boolean. It works on its own 		because isLearning value is true;
+
 var firstVariable;
 var secondVariable = "";
 var thirdVariable = 1;
