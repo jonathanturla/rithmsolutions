@@ -1,6 +1,6 @@
-## BOOLEAN LOGIC EXERCISES
+# BOOLEAN LOGIC EXERCISES
 
-# Part 1
+### Part 1
 Write down what the following statements will return. Try to figure this out before putting the commands in the chrome console.
 
 
