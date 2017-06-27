@@ -25,12 +25,12 @@ Answers:
 Answer the following questions about this code block:
 
 
-var isLearning = true;
-if(isLearning){
-    console.log("Keep it up!");
-} else {
-    console.log("Pretty sure you are learning....");
-}
+    var isLearning = true;
+    if(isLearning){
+        console.log("Keep it up!");
+    } else {
+        console.log("Pretty sure you are learning....");
+    }
 
 
 	1. What should the above code console.log? Why?
