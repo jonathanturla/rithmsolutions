@@ -21,7 +21,7 @@ Answers:
 	7.) true || false;
 	true
 
-#Part II
+### Part II
 Answer the following questions about this code block:
 
 
@@ -70,7 +70,7 @@ if(firstVariable){
 	5. The value of the thirdVariable is a truthy value because 1 is considered as true.
 		Is the value of thirdVariable a "truthy" value? Why?
 
-#Part III
+### Part III
 
 	1.Research Math.random here and write an if statement that console.log's "Over 0.5" if Math.random returns a number greater than 0.5. Otherwise console.log "Under 0.5".
 
