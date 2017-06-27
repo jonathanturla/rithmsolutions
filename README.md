@@ -71,7 +71,8 @@ if(firstVariable){
 		Is the value of thirdVariable a "truthy" value? Why?
 
 #Part III
-	1.
+
+	1.Research Math.random here and write an if statement that console.log's "Over 0.5" if Math.random returns a number greater than 0.5. Otherwise console.log "Under 0.5".
 
 	if (Math.random() < 0.5){
 		console.log "Over 0.5";
