@@ -58,19 +58,33 @@ Answer the following questions about this code block:
 # ARRAY EXERCISES
 ### Exercises
 1. Create an array of your favorite foods (call it favoriteFoods). Make sure it has at least three elements.
+
 	favoriteFoods = ["pizza", "icecream", "burger"];
+	
 2. Access the second element in favoriteFoods.
+
 	favoriteFoods[2]
+	
 3. Change the last element in favoriteFoods to some other food.
+
 	favoriteFoods[(favoriteFoods.length - 1)] = "spaghetti"
+	
 4. Remove the first element in favoriteFoods and store it in a variable called formerFavoriteFood.
+
 	formerFavoriteFood = favoriteFoods.shift();
+	
 5. Add a favorite food to the back of the favoriteFoods array.
+
 	favoriteFoods.push("wings");
+	
 6. Add a favorite food to the front of the favoriteFoods array.
+
 	favoriteFoods.unshift("ham");
+	
 7. What happens when you try to pop from an empty array?
+
     Nothing is added to the array. And the function returns undefined.
+    
 8. In the examples below, use splice to convert the first array to the second array:
   
 9.  Write the command that gives the indexOf where "Foo" is located (this should return -1).
