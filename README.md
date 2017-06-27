@@ -33,26 +33,27 @@ Answer the following questions about this code block:
     }
 
 
-	1. What should the above code console.log? Why?
-	The code should print "Keep it up!"
-	2. Why do we not need to specify if(isLearning === true)? Why does if(isLearning) work on its own?
-	We do not need to specify it because condition in if-else statements will be forced into a boolean. It works on its own 		because isLearning value is true;
+1. What should the above code console.log? Why?
+The code should print "Keep it up!"
+2. Why do we not need to specify if(isLearning === true)? Why does if(isLearning) work on its own?
+We do not need to specify it because condition in if-else statements will be forced into a boolean. 
+It works on its own because isLearning value is true;
 
 
-var firstVariable;
-var secondVariable = "";
-var thirdVariable = 1;
-var secretMessage = "Shh!";
+    var firstVariable;
+    var secondVariable = "";
+    var thirdVariable = 1;
+    var secretMessage = "Shh!";
 
-if(firstVariable){
-    console.log("first");
-} else if(firstVariable || secondVariable){
-    console.log("second");
-} else if(firstVariable || thirdVariable){
-    console.log("third");
-} else {
-    console.log("fourth");
-}
+    if(firstVariable){
+        console.log("first");
+    } else if(firstVariable || secondVariable){
+        console.log("second");
+    } else if(firstVariable || thirdVariable){
+        console.log("third");
+    } else {
+        console.log("fourth");
+    }
 
 
 	1. What should the above code console.log? Why?
@@ -227,3 +228,121 @@ for (var singleKey in programming){
 	console.log(programming[singleKey]);
 }
 
+
+# FUNCTIONS
+
+Exercises
+1 Write a function called myName that logs your full name. Save your full name to a variable inside of the function body, then use console.log to print your name to the console.
+
+function myName(){
+  var fullName = prompt("Please enter your Full Name: ");
+  return fullName
+
+}
+
+console.log(myName())
+
+2. Create an array called favoriteFoods which contains the strings "pizza" and "ice cream".
+
+var favoriteFood = ["pizza", "icecream"];
+
+
+
+
+
+3. Write a function called randomFood. The function should use Math.random to randomly choose a favorite food in your favoriteFoods array to return. For example, your function will return either pizza or ice cream, depending on what you get back from Math.random.
+function randomFood(){  
+ 
+ var favoriteFood = ["pizza", "icecream"];
+ 
+ return Math.random() > .5 ? favoriteFood[0] : favoriteFood[1]
+ 
+}
+
+4. Create a variable called numbers which is an array that contains the numbers 1 through 10.
+
+ var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
+
+5. Write a function called displayOddNumbers which iterates over the numbers array and console.logs out all of the numbers that are odd.
+ 
+function displayOddNumbers(){
+	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
+	
+	for (i=0; i<num.length; i++){
+
+		if ((num[i] % 2) != 0) {
+		   console.log(num[i]);
+		}
+	}
+
+}
+
+displayOddNumbers();
+
+6. Write a function called displayEvenNumbers which iterates over the numbers array and console.logs out all of the numbers that are even.
+
+function displayEvenNumbers(){
+	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
+	
+	for (i=0; i<num.length; i++){
+
+		if ((num[i] % 2) == 0) {
+		   console.log(num[i]);
+		}
+	}
+
+}
+
+displayEvenNumbers();
+
+
+7. Create a function called returnFirstOddNumber which iterates over the numbers array and returns the first odd number it finds
+
+function returnFirstOddNumber(){
+	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
+	
+	for (i=0; i<num.length; i++){
+
+		if ((num[i] % 2) != 0) {
+		   return num[i];
+		}
+	}
+
+}
+
+returnFirstOddNumber();
+
+
+8. Create a function called returnFirstEvenNumber which iterates over the numbers array and returns the first even number it finds
+function returnFirstEvenNumber(){
+	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
+	
+	for (i=0; i<num.length; i++){
+
+		if ((num[i] % 2) == 0) {
+		   return num[i];
+		}
+	}
+
+}
+
+returnFirstEvenNumber();
+
+9. Create a function called returnFirstHalf which returns the first half of the numbers array
+function returnFirstHalf(){
+	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
+	
+	return num.slice(0, 5);
+
+}
+
+returnFirstHalf();
+
+10. Create a function called returnSecondHalf which returns the second half of the numbers array
+function returnSecondHalf(){
+	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
+	
+	return num.slice(5);
+
+}
+returnSecondHalf();
