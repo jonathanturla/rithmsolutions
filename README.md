@@ -24,13 +24,48 @@ Answers:
 #Part II
 Answer the following questions about this code block:
 
-	1. The code should print "Keep it up!"
-	2. We do not need to specify it because condition in if-else statements will be forced into a boolean. It works on its own 		because isLearning value is true;
-	1. It should console log "third" because it is the first conditional statement to satisfy its condition.
-	2. undefined
-	3. It's not a truthy value because it has a value of undefined and undefined is a falsy value.
-	4. The secondVariable is not a truthy value because single quotes and double quotes are considered as falsy value.
+var isLearning = true;
+if(isLearning){
+    console.log("Keep it up!");
+} else {
+    console.log("Pretty sure you are learning....");
+}
+
+	1. What should the above code console.log? Why?
+		The code should print "Keep it up!"
+	2. Why do we not need to specify if(isLearning === true)? Why does if(isLearning) work on its own?
+		We do not need to specify it because condition in if-else statements will be forced into a boolean. It works on its own 		because isLearning value is true;
+		
+var firstVariable;
+var secondVariable = "";
+var thirdVariable = 1;
+var secretMessage = "Shh!";
+
+if(firstVariable){
+    console.log("first");
+} else if(firstVariable || secondVariable){
+    console.log("second");
+} else if(firstVariable || thirdVariable){
+    console.log("third");
+} else {
+    console.log("fourth");
+}
+
+
+	1. What should the above code console.log? Why?
+		It should console log "third" because it is the first conditional statement to satisfy its condition.
+		
+	2. What is the value of firstVariable when it is initialized?
+		undefined
+		
+	3. Is the value of firstVariable a "truthy" value? Why?
+		It's not a truthy value because it has a value of undefined and undefined is a falsy value.
+		
+	4. Is the value of secondVariable a "truthy" value? Why?
+		The secondVariable is not a truthy value because single quotes and double quotes are considered as falsy value.
+		
 	5. The value of the thirdVariable is a truthy value because 1 is considered as true.
+		Is the value of thirdVariable a "truthy" value? Why?
 
 #Part III
 	1.
