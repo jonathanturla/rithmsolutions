@@ -55,8 +55,8 @@ Answer the following questions about this code block:
 
 
 
-## ARRAY EXERCISES
-# Exercises
+# ARRAY EXERCISES
+### Exercises
 1. Create an array of your favorite foods (call it favoriteFoods). Make sure it has at least three elements.
 	favoriteFoods = ["pizza", "icecream", "burger"];
 2. Access the second element in favoriteFoods.
