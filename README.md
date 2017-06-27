@@ -23,9 +23,9 @@ Answers:
 
 #Part II
 Answer the following questions about this code block:
+
 	1. The code should print "Keep it up!"
 	2. We do not need to specify it because condition in if-else statements will be forced into a boolean. It works on its own 		because isLearning value is true;
-
 	1. It should console log "third" because it is the first conditional statement to satisfy its condition.
 	2. undefined
 	3. It's not a truthy value because it has a value of undefined and undefined is a falsy value.
