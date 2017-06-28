@@ -147,6 +147,8 @@ var people = ["Greg", "Mary", "Devon", "James"];
 	
 people.splice(2,1, "Elizabeth, "Artie");
 ```
+11. Create a new variable called withBob and set it equal to the people array concatenated with the string of "Bob".
+>var withBob = people.concat("Bob");
 # OBJECT EXCERCISES
 ```
 var programming = {
@@ -206,118 +208,167 @@ for (var singleKey in programming){
 
 # FUNCTIONS
 ## Exercises
-1. Write a function called myName that logs your full name. Save your full name to a variable inside of the function body, then use console.log to print your name to the console.
+### difference
+
+this function takes in two parameters and returns the difference of the two;
 ```
-function myName(){
-  var fullName = prompt("Please enter your Full Name: ");
-  return fullName
+function difference(num1, num2){
+	return num1 - num2;
 
 }
-
-console.log(myName())
 ```
-2. Create an array called favoriteFoods which contains the strings "pizza" and "ice cream".
+### product
+this function takes in two parameters and returns the product of the two;
 ```
-var favoriteFood = ["pizza", "icecream"];
-```
-3. Write a function called randomFood. The function should use Math.random to randomly choose a favorite food in your favoriteFoods array to return. For example, your function will return either pizza or ice cream, depending on what you get back from Math.random.
-```
-function randomFood(){  
- 
- var favoriteFood = ["pizza", "icecream"];
- 
- return Math.random() > .5 ? favoriteFood[0] : favoriteFood[1]
- 
+function product(num1, num2){
+	return num1 * num2;
 }
 ```
-4. Create a variable called numbers which is an array that contains the numbers 1 through 10.
-
-var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
-
-5. Write a function called displayOddNumbers which iterates over the numbers array and console.logs out all of the numbers that are odd.
-``` 
-function displayOddNumbers(){
-	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
+### printDay
+this function takes in one parameter (a number from 1-7) and returns the day of the week (1 is Sunday, 2 is Monday, 3 is Tuesday etc.). If the number is less than 1 or greater than 7, the function should return undefined;
+```
+function printDay(day){
+	switch(day){
+	case 1:
+		return "Sunday";
 	
-	for (i=0; i<num.length; i++){
+	case 2:
+		return "Monday";
+		
+	case 3:
+		return "Tuesday";
 
-		if ((num[i] % 2) != 0) {
-		   console.log(num[i]);
-		}
+	case 4:
+		return "Wednesday";
+
+	case 5:
+		return "Thursday";
+	case 6:
+		return "Friday";
+	case 7:
+		return "Saturday";
+	default:
+		return undefined;
+	}
+}
+```
+### lastElement
+this function takes in one parameter (an array) and returns the last value in the array. It should return undefined if the array is empty.
+
+```
+function lastElement(arr){
+	return arr[arr.length-1];
+
+}
+
+```
+### numberCompare
+this function takes in two parameters (both numbers). If the first is greater than the second, this function returns "First is greater". If the second number is greater than the first, the function returns "Second is greater". Otherwise the function returns "Numbers are equal"
+```
+function numberCompare(num1, num2){
+	if (num1 > num2){
+	return "First is greater";
+	
+	} else if (num1 < num2){
+	return "Second is greater";
+	
+	} else {
+		return "Numbers are equal";
+	}
+}
+```
+
+### singleLetterCount
+this function takes in two parameters (two strings). The first parameter should be a word and the second should be a letter. The function returns the number of times that letter appears in the word. The function should be case insensitive (does not matter if the input is lowercase or uppercase). If the letter is not found in the word, the function should return 0.
+```
+function singleLetterCount(word, letter){
+	var letterCount = 0;
+
+	for(var i=0; i<word.length; i++){	
+
+		if (word[i].toLowerCase() === letter.toLowerCase()){
+			letterCount = letterCount + 1;
+		}	
 	}
 
+	return letterCount;
 }
-
-displayOddNumbers();
 ```
-6. Write a function called displayEvenNumbers which iterates over the numbers array and console.logs out all of the numbers that are even.
-```
-function displayEvenNumbers(){
-	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
-	
-	for (i=0; i<num.length; i++){
 
-		if ((num[i] % 2) == 0) {
-		   console.log(num[i]);
+### multipleLetterCount
+```
+function multipleLetterCount(string){
+	countMultipleLetter = {}
+	for(var i=0; i<string.length; i++){
+
+
+		var letterCount = 0;
+		for(var j=0; j<string.length; j++){
+
+			if (string[i] == string[j]){
+				letterCount = letterCount + 1;
+			}
+		
 		}
+		
+		countMultipleLetter[string[i]] = letterCount;
+
 	}
-
+	return countMultipleLetter;
 }
-
-displayEvenNumbers();
-
 ```
-7. Create a function called returnFirstOddNumber which iterates over the numbers array and returns the first odd number it finds
-```
-function returnFirstOddNumber(){
-	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
-	
-	for (i=0; i<num.length; i++){
 
-		if ((num[i] % 2) != 0) {
-		   return num[i];
+### arrayManipulation
+```
+this function should take in at most four parameters (an array, command, location, and value).
+If the command is "remove" and the location is "end", the function should remove the last value in the array and return the value removed. (In this case, the function only needs three arguments.)
+If the command is "remove" and the location is "beginning", the function should remove the first value in the array and return the value removed. (In this case, the function only needs three arguments.)
+If the command is "add" and the location is "beginning", the function should add the value (fourth parameter) to the beginning of the array and return the array.
+If the command is "add" and the location is "end", the function should add the value (fourth parameter) to the end of the array and return the array.
+```
+function arrayManipulation(arr, command, location, val){
+	if (command == "add"){
+		if(location == "beginning"){
+			arr.unshift(val);
+			return arr;
+
+
+		}else if(location == "end"){
+			arr.push(val);
+			return arr;
 		}
-	}
 
-}
 
-returnFirstOddNumber();
-```
-
-8. Create a function called returnFirstEvenNumber which iterates over the numbers array and returns the first even number it finds
-```
-function returnFirstEvenNumber(){
-	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
-	
-	for (i=0; i<num.length; i++){
-
-		if ((num[i] % 2) == 0) {
-		   return num[i];
+	}else if (command == "remove"){
+		if(location == "beginning"){
+			return arr.shift(val);
+			
+		}else if(location == "end"){
+			return arr.pop(val);
 		}
+		
+
 	}
-
-}
-
-returnFirstEvenNumber();
-```
-9. Create a function called returnFirstHalf which returns the first half of the numbers array
-```
-function returnFirstHalf(){
-	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
 	
-	return num.slice(0, 5);
-
-}
-
-returnFirstHalf();
 ```
-10. Create a function called returnSecondHalf which returns the second half of the numbers array
+
+### isPalindrome
 ```
-function returnSecondHalf(){
-	var num = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10];
+A Palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This function should take in one parameter and returns true or false if it is a palindrome. As a bonus, allow your function to ignore whitespace and capitalization so that isPalindrome('a man a plan a canal Panama'); returns true
+```
+
+function isPalindrome(string){
+	string = string.split(" ");
+	string = string.join('');
 	
-	return num.slice(5);
+	for (var i = 0; i < string.length; i++){
+		
+		if (string[i] != string[string.length-(i+1)]){
+			return false;
+		}
+
+
+	}
+	return true;
 
 }
-returnSecondHalf();
-```
