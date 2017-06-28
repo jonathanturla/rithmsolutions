@@ -378,3 +378,31 @@ function isPalindrome(string){
 
 }
 ```
+### rockPaperScissors
+
+Using your knowledge so far, build a game of Rock/Paper/Scissor where through the use of the prompt function, a user can enter their choice and based on a random selection - they can either tie/win or lose against a computer.
+
+```
+function rpsGame(){
+      var playerHand = prompt("What will you draw (rock, paper, or scissors)? ");
+      var computerHand = Math.random()
+      
+      if ((computerHand > 0) && (computerHand < 0.30)){
+          computerHand = "rock"
+      } else if ((computerHand >= 0.30) && (computerHand <0.60)){
+          computerHand = "paper";
+      } else{
+          computerHand = "scissors";
+      }
+      
+      if ((playerHand == "rock") && (computerHand == "scissors")){
+        return "You won. Rock beats scissors!";
+      } else if ((playerHand == "paper" ) && (computerHand == "rock")){
+        return "You won. Paper beats rock!";
+      } else if ((playerHand == "scissors") && (computerHand == "paper")){
+        return "You won. Scissors beats paper!";
+      } else {
+          return "You lost. The " + computerHand + " beats " + playerHand;
+      }
+}
+```
