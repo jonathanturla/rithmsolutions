@@ -207,7 +207,7 @@ for (var singleKey in programming){
 
 # FUNCTIONS
 
-Exercises
+##Exercises
 1 Write a function called myName that logs your full name. Save your full name to a variable inside of the function body, then use console.log to print your name to the console.
 ```
 function myName(){
