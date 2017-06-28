@@ -570,7 +570,7 @@ displayEvenNumbers();
 ## Nested Objects Excercises
 
 Given the following nested object:
-
+```
 var nestedData = {
   innerData: {
     order: ["first", "second", "third"],
@@ -585,6 +585,7 @@ var nestedData = {
     }
   }
 }
+```
 
 1. Using a for loop, console.log all of the numbers in the primeNumbers array.
 
