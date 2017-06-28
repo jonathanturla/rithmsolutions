@@ -206,7 +206,6 @@ for (var singleKey in programming){
 ```
 
 # FUNCTIONS
-## Exercises
 ### difference
 
 this function takes in two parameters and returns the difference of the two;
