@@ -148,7 +148,7 @@ people.splice(2,1, "Elizabeth, "Artie");
 ```
 11. Create a new variable called withBob and set it equal to the people array concatenated with the string of "Bob".
 >var withBob = people.concat("Bob");
-# OBJECT EXCERCISES
+# OBJECT EXERCISES
 ```
 var programming = {
 	languages: ["JavaScript", "Python", "Ruby"],
@@ -567,7 +567,7 @@ function displayEvenNumbers(){
 displayEvenNumbers();
 ```
 
-## Nested Objects Excercises
+## Nested Objects Exercises
 
 Given the following nested object:
 ```
