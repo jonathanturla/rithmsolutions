@@ -40,11 +40,11 @@ Answer the following questions about this code block:
     }
 
 
-1. What should the above code console.log? Why?
+ 1. What should the above code console.log? Why?
 
 The code should print "Keep it up!"
 
-2. Why do we not need to specify if(isLearning === true)? Why does if(isLearning) work on its own?
+ 2. Why do we not need to specify if(isLearning === true)? Why does if(isLearning) work on its own?
 
 We do not need to specify it because condition in if-else statements will be forced into a boolean. 
 
