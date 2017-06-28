@@ -105,7 +105,8 @@ List of falsy Values:
 
 
 # ARRAY EXERCISES
-### Exercises
+## Exercises
+
 1. Create an array of your favorite foods (call it favoriteFoods). Make sure it has at least three elements.
 
   >favoriteFoods = ["pizza", "icecream", "burger"];
