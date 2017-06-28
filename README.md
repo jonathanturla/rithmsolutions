@@ -105,7 +105,6 @@ List of falsy Values:
 
 
 # ARRAY EXERCISES
-## Exercises
 1. Using a loop, iterate through this array and console.log all of the people.
  ```
  for(i=0; i < people.length; i++){
