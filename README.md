@@ -406,3 +406,154 @@ function rpsGame(){
       }
 }
 ```
+
+## Debugging Exercises
+
+Answer the following questions:
+
+What does the throw keyword do?
+Throw keyword is used to return an error. It is used to call an error object and/or set a string to get a message for that error.
+
+What does the finally keyword do? 
+Finally is a block of code in error handling in which it will execute no matter what happens.
+
+What is the difference between a TypeError and ReferenceError? TypeError
+Type error happens when we invoke a function or something with incorrect data type while Reference error happens when we invoke or access something outside of its scope.
+
+How do you create a snippet in the Chrome dev tools?
+You can create at snippet by opening the developer console first. Under the Sources tab, click snippet.
+
+In the Chrome dev tools, on the right hand side of the sources tab, there is a "pause" button which allows you to "pause on caught exceptions." What is an exception?
+Exception is an error that is found in your code. You handle errors with a try-catch code block.
+
+How do we "catch" errors in JavaScript? Give an example with code for what that might look like.
+
+try {
+  var numError = 6/0;
+}
+catch (e) {
+  console.log("The number that you define is not a valid number.");
+}
+
+Explain what type of error will be thrown, why the error is occuring, and how to fix it:
+1. person;
+
+The error will be a refernce error. We can fix this by declaring and initializing the variable person.
+
+2. 
+var data = {};
+data.displayInfo();
+
+The error will be a type error because we're accessing a function displayInfo. We can fix this by changing displayInfo as key and not as a function.
+
+3.
+var data = {};
+data.displayInfo.foo = "bar";
+
+The error will be a type error because we're accessing a property of an undefined function.
+
+4.
+function data(){
+    var thing = "foo";
+}
+data();
+thing; //This will be a reference error because it's accessing a variable outside of its scope.
+
+Part 2
+Fix the broken code and explain what was wrong:
+1.
+```
+for(var i=0; i > 5; i++){
+    console.log(i);
+}
+```
+
+The condition for the for loop is not correct. The variable counter 'i' never satisfies the condition so the condition will be false immediately.
+
+Fix:
+```
+for(var i=0; i < 5; i++){
+    console.log(i);
+}
+```
+
+
+2.
+```
+function addIfEven(num){
+    if(num % 2 = 0){
+        return num + 5;
+    }
+    return num;
+}
+
+```
+There is a syntax error. The asignment operator "=" should be reaplaced with an equality operator "==".
+```
+function addIfEven(num){
+    if(num % 2 == 0){
+        return num + 5;
+    }
+    return num;
+}
+```
+
+3.
+```
+function loopToFive(){
+    for(var i=0, i < 5, i++){
+        console.log(i);
+    }
+}
+```
+
+There is a syntax error. The comma "," should be replaced by semi-colon ";".
+
+```
+function loopToFive(){
+    for(var i=0; i < 5; i++){
+        console.log(i);
+    }
+}
+```
+
+4.
+```
+function displayEvenNumbers(){
+    var numbers = [1,2,3,4,5,6,7,8];
+    var evenNumbers = [];
+    for(var i=0; i<numbers.length-1; i++;){
+        if(numbers % 2 = 0); {
+            evenNumbers.push(i);
+        }
+        return evenNumbers;
+    }
+}
+displayEvenNumbers();
+```
+
+Syntax errors here. 
+ 1.) semi-colon after i++
+ 2.) assignment operator instead of equalit operator in the condition of the if-statement.
+ 3.) semi-clon after the condition in the if-statement.
+ 
+4.) There parameter in the .push method should be numbers[i] instead of "i" only.
+5.) The numbers in the if conditional statement should be numbers[i]
+6.) The numbers.length-1 should only be numbers.length
+7.) return evenNumbers should be outside the for loop not inside.
+8.) comma inside the for loop instead of semi-colon.
+
+```
+function displayEvenNumbers(){
+    var numbers = [1,2,3,4,5,6,7,8];
+    var evenNumbers = [];
+    for(var i=0; i<numbers.length; i++){
+        if(numbers[i] % 2 == 0) {
+            evenNumbers.push(numbers[i]);
+        }
+    }
+
+    return evenNumbers;
+}
+displayEvenNumbers();
+```
