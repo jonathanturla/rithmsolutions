@@ -319,13 +319,18 @@ function multipleLetterCount(string){
 ```
 
 ### arrayManipulation
-```
+
 this function should take in at most four parameters (an array, command, location, and value).
+
+
 If the command is "remove" and the location is "end", the function should remove the last value in the array and return the value removed. (In this case, the function only needs three arguments.)
+
 If the command is "remove" and the location is "beginning", the function should remove the first value in the array and return the value removed. (In this case, the function only needs three arguments.)
+
 If the command is "add" and the location is "beginning", the function should add the value (fourth parameter) to the beginning of the array and return the array.
+
 If the command is "add" and the location is "end", the function should add the value (fourth parameter) to the end of the array and return the array.
-```
+
 ```
 function arrayManipulation(arr, command, location, val){
 	if (command == "add"){
@@ -354,8 +359,9 @@ function arrayManipulation(arr, command, location, val){
 ```
 
 ## isPalindrome
-```
+
 A Palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This function should take in one parameter and returns true or false if it is a palindrome. As a bonus, allow your function to ignore whitespace and capitalization so that isPalindrome('a man a plan a canal Panama'); returns true
+
 ```
 
 function isPalindrome(string){
@@ -373,3 +379,4 @@ function isPalindrome(string){
 	return true;
 
 }
+```
