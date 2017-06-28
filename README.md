@@ -412,28 +412,33 @@ function rpsGame(){
 Answer the following questions:
 
 What does the throw keyword do?
-Throw keyword is used to return an error. It is used to call an error object and/or set a string to get a message for that error.
+>Throw keyword is used to return an error. It is used to call an error object and/or set a string to get a message for that error.
 
 What does the finally keyword do? 
-Finally is a block of code in error handling in which it will execute no matter what happens.
+>Finally is a block of code in error handling in which it will execute no matter what happens.
 
 What is the difference between a TypeError and ReferenceError? TypeError
-Type error happens when we invoke a function or something with incorrect data type while Reference error happens when we invoke or access something outside of its scope.
+>Type error happens when we invoke a function or something with incorrect data type while Reference error happens when we invoke or access something outside of its scope.
 
 How do you create a snippet in the Chrome dev tools?
-You can create at snippet by opening the developer console first. Under the Sources tab, click snippet.
+
+>You can create at snippet by opening the developer console first. Under the Sources tab, click snippet.
 
 In the Chrome dev tools, on the right hand side of the sources tab, there is a "pause" button which allows you to "pause on caught exceptions." What is an exception?
-Exception is an error that is found in your code. You handle errors with a try-catch code block.
+
+>Exception is an error that is found in your code. You handle errors with a try-catch code block.
 
 How do we "catch" errors in JavaScript? Give an example with code for what that might look like.
 
+>We catch error with the us of try-catch block.
+```
 try {
   var numError = 6/0;
 }
 catch (e) {
   console.log("The number that you define is not a valid number.");
 }
+```
 
 Explain what type of error will be thrown, why the error is occuring, and how to fix it:
 1. person;
@@ -441,14 +446,18 @@ Explain what type of error will be thrown, why the error is occuring, and how to
 The error will be a refernce error. We can fix this by declaring and initializing the variable person.
 
 2. 
+```
 var data = {};
 data.displayInfo();
+```
 
 The error will be a type error because we're accessing a function displayInfo. We can fix this by changing displayInfo as key and not as a function.
 
 3.
+```
 var data = {};
 data.displayInfo.foo = "bar";
+```
 
 The error will be a type error because we're accessing a property of an undefined function.
 
