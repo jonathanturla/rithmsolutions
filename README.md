@@ -357,7 +357,7 @@ function arrayManipulation(arr, command, location, val){
 	
 ```
 
-## isPalindrome
+### isPalindrome
 
 A Palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This function should take in one parameter and returns true or false if it is a palindrome. As a bonus, allow your function to ignore whitespace and capitalization so that isPalindrome('a man a plan a canal Panama'); returns true
 
