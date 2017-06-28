@@ -106,49 +106,47 @@ List of falsy Values:
 
 # ARRAY EXERCISES
 ## Exercises
-
-1. Create an array of your favorite foods (call it favoriteFoods). Make sure it has at least three elements.
-
-  >favoriteFoods = ["pizza", "icecream", "burger"];
+1. Using a loop, iterate through this array and console.log all of the people.
+ ```
+ for(i=0; i < people.length; i++){
+	console.log(people[i]);
 	
-2. Access the second element in favoriteFoods.
+ }
+```
+2. Write the command to remove "Greg" from the array.
+>people.shift();  // arr = ["Mary, "Devon", "James"]
 
->favoriteFoods[2]
+3. Write the command to remove "James" from the array.
+>people.pop(); // arr = ["Mary", "Devon"]
+4. Write the command to add "Matt" to the front of the array.
+>people.unshift("Matt"); // arr = ["Matt", "Mary", "Devon"]
+5. Write the command to add your name to the end of the array.
+>people.push("Jon"); // arr = ["Matt", "Mary", "Devon", "Jon"]
+6. Using a loop, iterate through this array and after console.log-ing "Mary", exit from the loop. // ["Matt", "Mary"]
+```
+for(i=0; i < people.length; i++){
+	console.log(people[i]);
+	if (people[i] == "Mary"){
+		break;
+	}
+
 	
-3. Change the last element in favoriteFoods to some other food.
+ }
 
->favoriteFoods[(favoriteFoods.length - 1)] = "spaghetti"
-	
-4. Remove the first element in favoriteFoods and store it in a variable called formerFavoriteFood.
+7. Write the command to make a copy of the array using slice. The copy should NOT include "Mary" or "Matt".
+>arr2 = people.slice(2); // arr2 = ["Devon", "Jon"]
 
->formerFavoriteFood = favoriteFoods.shift();
-	
-5. Add a favorite food to the back of the favoriteFoods array.
+8. Write the command that gives the indexOf where "Mary" is located.
+>people.indexOf("Mary");
 
->favoriteFoods.push("wings");
-	
-6. Add a favorite food to the front of the favoriteFoods array.
-
->favoriteFoods.unshift("ham");
-	
-7. What happens when you try to pop from an empty array?
-
->Nothing is added to the array. And the function returns undefined.
-    
-8. In the examples below, use splice to convert the first array to the second array:
->people.slice(2);
-
-9.  Write the command that gives the indexOf where "Foo" is located (this should return -1).
+9. Write the command that gives the indexOf where "Foo" is located (this should return -1).
 >people.indexOf("Foo");
-    
-10. Redefine the people variable with the value you started with. 
-.Using the splice command, remove "Devon" from the array and add "Elizabeth" and "Artie". Your array should look like this when you are done ["Greg", "Mary", "Elizabeth", "Artie", "James"].
-
+10. Redefine the people variable with the value you started with. Using the splice command, remove "Devon" from the array and add "Elizabeth" and "Artie". Your array should look like this when you are done ["Greg", "Mary", "Elizabeth", "Artie", "James"].
 ```
 var people = ["Greg", "Mary", "Devon", "James"];
-people.splice(2,1,"Elizabeth", "Artie");
+	
+people.splice(2,1, "Elizabeth, "Artie");
 ```
-
 # OBJECT EXCERCISES
 ```
 var programming = {
