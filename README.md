@@ -132,7 +132,7 @@ for(i=0; i < people.length; i++){
 
 	
  }
-
+```
 7. Write the command to make a copy of the array using slice. The copy should NOT include "Mary" or "Matt".
 >arr2 = people.slice(2); // arr2 = ["Devon", "Jon"]
 
